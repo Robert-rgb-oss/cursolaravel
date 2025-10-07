@@ -6,5 +6,5 @@
 @if(Session::get('danger'))
     <div style="padding:15px; background-color:red; color:white;">
         <p>{{ $message }}</p>
-</div>
+    </div>
 @endif
