@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    @if($errors->any())
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
     <a href="{{ route('note.index') }}">Back</a>
     <form action="{{ route('note.store') }}" method="POST">
         @csrf
