@@ -29,7 +29,7 @@ class NoteController extends Controller
         // ]);
     
         Note::create($request->all());
-        return redirect()->route('note.index');
+        return redirect()->route('note.index')->with('success','note created');
     }
 
     public function edit(Note $note):view
@@ -41,7 +41,7 @@ class NoteController extends Controller
     {
     
         $note->update($request->all());
-        return redirect()->route('note.index');
+        return redirect()->route('note.index')->with('success','note updated');
     }
 
     public function show(Note $note):view
