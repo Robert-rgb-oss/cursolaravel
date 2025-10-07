@@ -5,10 +5,16 @@
     <form action="{{ route('note.store') }}" method="POST">
         @csrf
         <label for="">Title</label>
-        <input type="text" name="title">
-
+        <input type="text" name="title"><br>
+        @error('title')
+            <p style="color:red;">{{ $message }}</p>
+        @enderror
+        
         <label for="">Description</label>
-        <input type="text" name="description">
+        <input type="text" name="description"><br>
+        @error('description')
+            <p style="color:red;">{{ $message }}</p>
+        @enderror
 
         <input type="submit" value="Create">
     </form>
