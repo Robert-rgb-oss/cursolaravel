@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notes', function (Blueprint $table) {
+       Schema::create('notes', function(Blueprint $table){
             $table->id();
-            $table->title();
-            $table->description();
+            $table->string('title', 60);
+            $table->string('description', 255);
             $table->timestamps();
         });
     }
