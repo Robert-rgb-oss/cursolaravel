@@ -26,9 +26,10 @@ class NoteController extends Controller
     
     public function store(NoteRequest $request):JsonResponse
     {
-        Note::create($request->all());
+        $note = Note::create($request->all());
         return response()->json([
-            'success'=> true
+            'success'=> true,
+            'data'=> $note
         ],201);
     }
 
@@ -49,7 +50,8 @@ class NoteController extends Controller
         $note->save();
 
         return response()->json([
-            'success'=> true
+            'success'=> true,
+            'data' => $note
         ],200);
     }
 
