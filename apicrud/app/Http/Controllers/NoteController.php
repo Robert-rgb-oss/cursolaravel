@@ -24,7 +24,8 @@ class NoteController extends Controller
     {
         Note::create($request->all());
         return response()->json([
-            'success'=> true
+            'success'=> true,
+            'data'=> new NoteResource($note)
         ],201);
     }
 
