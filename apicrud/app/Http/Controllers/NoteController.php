@@ -22,7 +22,7 @@ class NoteController extends Controller
     
     public function create(NoteRequest $request):JsonResponse
     {
-        Note::create($request->all());
+        $note = Note::create($request->all());
         return response()->json([
             'success'=> true,
             'data'=> new NoteResource($note)
@@ -35,15 +35,16 @@ class NoteController extends Controller
         $note = Note::create($request->all());
         return response()->json([
             'success'=> true,
-            'data'=> $note
+            'data'=> new NoteResource($note)
         ],201);
     }
 
     
-    public function show($id):JsonResponse
+    public function show($id):JsonResource
     {
-        //$note = Note::find($id);
-        return response()->json(Note::find($id), 200);
+        $note = Note::find($id);
+        // return response()->json(Note::find($id), 200);
+        return new NoteResource($note);
     }
 
     
@@ -57,7 +58,7 @@ class NoteController extends Controller
 
         return response()->json([
             'success'=> true,
-            'data' => $note
+            'data' => new NoteResource($note)
         ],200);
     }
 
