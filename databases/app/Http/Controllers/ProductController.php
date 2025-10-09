@@ -8,7 +8,7 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function index():View
+    public function index():View 
     {
         $products = Product::all();
         return view('product.index', compact('products'));
