@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\NoteRequest;
 use App\Models\Note;
+use App\Http\Resources\NoteResource;
+
 
 class NoteController extends Controller
 {
@@ -12,7 +14,8 @@ class NoteController extends Controller
     public function index():JsonResponse
     {
         //$notes = Note::all();
-        return response()->json(Note::all(),200);
+        // return response()->json(Note::all(),200);
+        return NoteResource::collection(Note::all());
     }
 
     
