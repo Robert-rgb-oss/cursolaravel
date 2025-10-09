@@ -9,7 +9,7 @@
    @forelse($products as$product)
    <div>
         <h3>{{ $product-name }}</h3>
-        <p>{{ $product->short_description}}</p>
+        <p>{{ $product->short_description }}</p>
         <p>{{ $product->price}} €</p>
     </div>
     <h5>No data.</h5>
