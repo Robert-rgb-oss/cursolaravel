@@ -6,13 +6,13 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Requests\NoteRequest;
 use App\Models\Note;
 use App\Http\Resources\NoteResource;
-use Illuminate\Http\Resources\Json\Jsonresource;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 
 class NoteController extends Controller
 {
     
-    public function index():JsonResponse
+    public function index():JsonResource
     {
         //$notes = Note::all();
         // return response()->json(Note::all(),200);
