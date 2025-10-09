@@ -4,19 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Note extends
-
+class Note extends Model
 {
-      protected $guarded = []
+    protected $guarded = [];
 
-      protected $guarded = []
-
-      protected $hidden = [
+    protected $hidden = [
         'created_at',
-        ''
-
-        'title',
-        'description',
+        'updated_at'
         
     ];
 }
