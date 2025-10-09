@@ -18,6 +18,7 @@ class NoteResource extends JsonResource
             'example' => 'This is an example.'
         ];
     }
+}
 
     /**
      * Transform the resource into an array.

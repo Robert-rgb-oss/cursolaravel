@@ -6,6 +6,7 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Requests\NoteRequest;
 use App\Models\Note;
 use App\Http\Resources\NoteResource;
+use Illuminate\Http\Resources\Json\Jsonresource;
 
 
 class NoteController extends Controller
