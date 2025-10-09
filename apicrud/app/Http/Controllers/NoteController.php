@@ -42,7 +42,7 @@ class NoteController extends Controller
     
     public function show($id):JsonResource
     {
-        $note = Note::find($id);
+        $note = Note::find($id); 
         // return response()->json(Note::find($id), 200);
         return new NoteResource($note);
     }
