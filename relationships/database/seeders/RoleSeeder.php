@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use ºApp\Models\Role;
+use App\Models\Role;
+
 
 class RoleSeeder extends Seeder
 {
@@ -14,45 +15,49 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-       Role::create([
+        Role::create([
             'id'=> 1,
-            'name' => 'admin'
-       ]);
-         Role::create([
-                'id'=> 2,
-                'name' => 'staff'
-         ]);
-         Role::create([
-                'id'=> 3,
-                'name' => 'user'
-         ]);
-         Role::create([
-                'id'=> 4,
-                'name' => 'guest'
-         ]);
+            'name'=> 'admin'
+        ]);
 
-        DB::table('role_user')->insert([
-            'role_id' => 1,
-            'user_id' => 1,
-            'added_by' => "Jose"
-         ]);
+        Role::create([
+            'id'=> 2,
+            'name'=> 'staff'
+        ]);
 
-        DB::table('role_user')->insert([
-            'role_id' => 2,
-            'user_id' => 2,
-            'added_by' => "Luis"
+        Role::create([
+            'id'=> 3,
+            'name'=> 'user'
+        ]);
+
+        Role::create([
+            'id'=> 4,
+            'name'=> 'guest'
         ]);
 
         DB::table('role_user')->insert([
-            'role_id' => 3,
-            'user_id' => 3,
-            'added_by' => "Natalia"
+            'role_id'=> 1,
+            'user_id'=> 1,
+            'added_by'=> "Jose"
         ]);
 
         DB::table('role_user')->insert([
-            'role_id' => 4,
-            'user_id' => 3,
-            'added_by' => "Ana"
+            'role_id'=> 2,
+            'user_id'=> 1,
+            'added_by'=> "Luis"
         ]);
+
+        DB::table('role_user')->insert([
+            'role_id'=> 3,
+            'user_id'=> 3,
+            'added_by'=> "Jose"
+        ]);
+
+        DB::table('role_user')->insert([
+            'role_id'=> 1,
+            'user_id'=> 2,
+            'added_by'=> "Natalia"
+        ]);
+        
     }
 }
