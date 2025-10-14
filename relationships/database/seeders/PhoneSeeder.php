@@ -18,13 +18,12 @@ class PhoneSeeder extends Seeder
             'phone_number' => 66666,
             'user_id' => 1
         ]);
-    }
-    public function run2(): void
-    {
+
         Phone::create([
             'prefix'=> 53,
             'phone_number' => 77777,
             'user_id' => 1
         ]);
     }
+ 
 }
