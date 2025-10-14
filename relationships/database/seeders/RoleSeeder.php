@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use ºApp\Models\Role;
 
 class RoleSeeder extends Seeder
@@ -29,5 +30,23 @@ class RoleSeeder extends Seeder
                 'id'=> 4,
                 'name' => 'guest'
          ]);
+
+        DB::table('role_user')->insert([
+            'role_id' => 1,
+            'user_id' => 1,
+            'added_by' => "Jose"
+         ]);
+
+        DB::table('role_user')->insert([
+            'role_id' => 2,
+            'user_id' => 2,
+            'added_by' => "Luis"
+        ]);
+
+        DB::table('role_user')->insert([
+            'role_id' => 3,
+            'user_id' => 3,
+            'added_by' => "Natalia"
+        ]);
     }
 }
