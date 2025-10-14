@@ -6,7 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ Prefix: $user->phone->prefix }}</h1>
-    <h1>{{ Phone: $user->phone->phone_number }}</h1>
+    <h1>{{ $user->name }} Phones:</h1>
+    <ul>
+        @foreach ($user->phone as $phone)
+        <li>{{ $phone->prefix }} {{ $phone->phone_number }}</li>
+        @endforeach
 </body>
 </html>

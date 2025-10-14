@@ -19,6 +19,7 @@ class PhoneSeeder extends Seeder
             'user_id' => 1
         ]);
     }
+    public function run2(): void
     {
         Phone::create([
             'prefix'=> 53,
