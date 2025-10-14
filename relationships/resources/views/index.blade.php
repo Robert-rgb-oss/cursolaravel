@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $user->email }}</h1>
+    <h1>{{ Prefix: $user->phone->prefix }}</h1>
+    <h1>{{ Phone: $user->phone->phone_number }}</h1>
 </body>
 </html>
