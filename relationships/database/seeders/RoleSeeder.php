@@ -48,5 +48,11 @@ class RoleSeeder extends Seeder
             'user_id' => 3,
             'added_by' => "Natalia"
         ]);
+
+        DB::table('role_user')->insert([
+            'role_id' => 4,
+            'user_id' => 3,
+            'added_by' => "Ana"
+        ]);
     }
 }
