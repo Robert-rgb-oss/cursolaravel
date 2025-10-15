@@ -8,8 +8,8 @@
 <body>
     <h1>{{ $user->name }} Phones:</h1>
     <ul>
-        @foreach($user->phones as $phone)
-        <li>{{ $phone->prefix }} {{ $phone->phone_number }}</li>
+        @foreach($user->roles as $role)
+        <li>{{ $role->name }} Added by: {{ $role->pivot->added_by }}</li>
         @endforeach
     </ul>
 
